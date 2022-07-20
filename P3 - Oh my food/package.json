@@ -1,0 +1,26 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "Projet 3 openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flamedevilfruit/Projet-3-Ohmyfood.git"
+  },
+  "keywords": [
+    "Manda",
+    "Koita"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flamedevilfruit/Projet-3-Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/flamedevilfruit/Projet-3-Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.49.7"
+  }
+}

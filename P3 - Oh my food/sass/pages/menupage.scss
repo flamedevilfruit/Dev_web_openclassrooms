@@ -1,0 +1,146 @@
+@use "../utils/mixins.scss";
+@use "../base/animation.scss";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+
+.menu {
+    margin-top: -4rem;
+    background-color: #f6f6f6;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+
+&__header {
+    @include mixins.flex-space;
+    padding: 1rem 2rem 0 1.5rem;
+}
+
+&__title {
+    font-family:'Shrikhand', cursive;
+}
+
+&__btn {
+    border: none;
+    background-color: inherit;
+    @include mixins.flex-center;
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+}
+
+&__like {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+&__btn .fas {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(0deg,$color-primary,$color-secondary);
+    transition: .5s;
+    opacity: 0;
+    &:hover {
+    opacity: 1;
+    transform: translateY(-1%) scale(1.1);
+}
+}
+}
+
+@media (min-width:64rem) {
+    .submenus {
+        display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem; }
+}
+
+.submenu {
+    display: grid;
+
+&__list {
+    max-width: 1280px;
+    padding: 0 1rem;
+}
+
+&__title {
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+    &::after {
+    background-color: $color-tertiary;
+    content: "";
+    position: absolute;
+    height: 0.25rem;
+    width: 3rem;
+    left: 0px;
+    bottom: 1px;
+}
+}
+}
+
+.menuitm {
+    @include mixins.menuitem;
+    animation: Appear .6s both;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    &:hover .menuitm__confirmation {
+        margin-right: -1rem;
+    }
+
+&__description {
+    flex: 1;
+    width: 50px;
+}
+
+&__title, &__subtitle {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+&__price {
+    display: flex;
+    font-weight: 700;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+&__confirmation {
+    background-color: $color-tertiary;
+    @include mixins.flex-center;
+    width: 4rem;
+    margin: -1rem -5rem -1rem 1rem;
+    transition: .5s;
+}
+
+&__icon {
+    color: $color-tertiary;
+}
+
+&__check {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #fff;
+    @include mixins.flex-center;
+    border-radius: 100px;
+    margin-right: 0;
+
+}
+}
+
+
+@for $i from 1 through 10 {
+    .delay-#{$i} {
+        animation-delay: #{$i*.10}s;
+    }
+}
+
+.menuitm:hover i {
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+}

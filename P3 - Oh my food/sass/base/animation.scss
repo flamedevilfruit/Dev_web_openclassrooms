@@ -1,0 +1,48 @@
+@keyframes loader {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(0.5rem);
+    }
+
+    75% {
+        transform: translateY(-0.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes Appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+ 
+    100% {
+        transform: scale(1);
+    }
+ 
+ }
+
+ @keyframes quarterspin { 
+    0% {
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+
+}

@@ -1,0 +1,78 @@
+
+@mixin hidden-shadow {
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);  
+}
+
+@mixin base-shadow {
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+}
+
+@mixin loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #ffffffe6;
+    animation: loader .01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+}
+
+@mixin btn {
+    border: none;
+    padding:.75rem 1.5rem ;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+}
+
+@mixin tuto-step {
+    padding: 1.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    border-radius: 1.25rem;
+    background-color: #f3f3f3;
+    flex-grow: 1;
+    list-style-type: none;
+    position: relative;
+    &::before {
+    content: counter(steps);
+    counter-increment: steps;
+    background-color: #9356dc;
+    border-radius: 100px;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -0.7rem;
+    position: absolute;
+    bottom: 1.3rem;
+}
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin menuitem {
+    display: flex;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+    overflow: hidden;
+}
